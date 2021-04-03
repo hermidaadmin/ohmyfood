@@ -1,0 +1,48 @@
+.footer-main {
+    background-color: #393534;
+
+    &__title {
+        font-family: 'Shrikhand';
+        padding: 3rem;
+        // background-color: grey;
+        color: darken(white, 10%);
+        letter-spacing: 2px;
+    }
+
+}
+
+.info {
+   
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    // background-color: lightcoral;
+    color: whitesmoke;
+    padding-bottom: 5rem;
+    font-size: 1.4rem;
+
+
+    a {
+        color: whitesmoke;
+        text-decoration: none;
+        margin: 1rem 3rem;
+        width: fit-content;
+        outline: none;
+        transition: color 400ms;
+
+        &:hover {
+            color: darken(whitesmoke, 35%);
+        }
+    }
+
+    .fas.fa-utensils {
+        margin-right: 2rem;
+    }
+
+    .fas.fa-hands-helping {
+        margin-right: 1rem;
+    }
+    
+}
+

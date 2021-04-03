@@ -1,0 +1,341 @@
+@include media-md {
+
+    body {
+        width: 100%;
+    }
+
+    .loader {
+        width: 5em;
+        height: 5em;
+    }
+
+    .restaurant-page {
+        width: 100%;
+        
+
+
+        .footer-main {
+            text-align: center;
+            margin-bottom: 0;
+            width: 100%;
+        }
+
+        .info {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+            padding-bottom: 2rem;
+
+        }
+
+    }
+
+
+    header {
+        .sitename {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+        }
+    }
+        
+
+    .home {
+
+
+        .home-info__location {
+            background: whitesmoke;
+            height: 1.5rem;
+            width: 30%;
+            max-width: 200px;
+            margin: 0 auto;
+            border-radius: 10px;
+            border-top: 2px solid lightgrey;
+        }
+
+        .instructions {
+
+            h3 {
+                align-self: center;
+            }
+
+            .instruction-item {
+                min-width: 200px;
+                max-width: 300px;
+            }
+        }
+
+
+        .core-layout {
+            flex-direction: column;
+
+            h3 {
+                align-self: center;
+                position: relative;
+                right: 1rem;
+            }
+        }
+
+        .nav {
+            background: darken(whitesmoke, 2%);
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-bottom:5rem;
+            width: 90%;
+
+            .nav__link {
+                width: 430px;
+                min-width: 400px;
+                max-height: 320px;
+                height: 50vh;
+                min-height: 280px;
+                outline: none;
+                margin: 3rem;
+                margin-bottom: 5rem;
+                margin-top: 0;
+
+                .new {
+                    max-width: 70px;
+                }
+            }
+
+            .nav__restaurant-img {
+                width: 100%;
+                height: 75%;
+            }
+
+        }
+
+        .footer-main {
+            text-align: center;
+        }
+
+        .info {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 2rem;
+            font-size: 1.4rem;
+
+            .fas.fa-utensils {
+                margin-right: 1rem;
+            }
+
+            .fas.fa-hands-helping {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+        .restaurant-img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            z-index: 100;
+            background-size: cover;
+        }
+        
+        .restaurant {
+
+            width: 100%;
+            background-color: darken(whitesmoke, 5%);
+            position: relative;
+            height: 100%;
+            top: 30rem;
+            z-index: 500;
+            border-top-left-radius: 45px;
+            border-top-right-radius: 45px;
+            margin: 0;
+            padding: 0;
+
+            .title__name {
+                align-self: center;
+                margin: 0 auto;
+                position: relative;
+                left: 2rem;
+            }
+
+
+            .restaurant__course {
+                align-self: center;
+                margin: 0 auto;
+                position: relative;
+
+                &:after {
+                    width: fit-content;
+                    border-bottom: 0px;
+                }
+            }
+
+            .horiz-layout {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-top: 3rem;
+            }
+
+            .menu-layout {
+                width: 30%;
+                min-width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin: 0rem;
+            }
+
+            .menu {
+                width: 100%;
+                margin-bottom: 8rem;
+                .menu-item {
+                    width: 100%;
+                    max-width: 350px;
+                    margin: 4rem;
+                    margin-bottom: 0;
+                }
+            }
+
+
+            .btn__order {
+                width: 40%;
+                max-width: 210px;
+            }
+        }
+}
+
+
+
+
+
+
+
+@include media-s {
+
+    html {
+        font-size: 0.5em;
+    }
+
+    .explore-link {
+        font-size: 1.5rem;
+    }
+
+    .instructions {
+
+        .instruction-item {
+
+            p {font-size: 1.5rem;}
+        
+        }
+    }
+}
+
+
+
+
+
+
+@include media-l {
+    .nav {
+        max-width: 1100px;
+    }
+
+    .restaurant {
+        top: 45rem;
+        padding-top: 3rem;
+        
+        .restaurant__course {
+            text-align: center;
+        }
+    }
+
+    .horiz-layout {
+        flex-wrap: wrap;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+@include media-xl {
+
+html {
+    font-size: 1em;
+}
+
+.home {
+    // background-color: lightblue;
+
+    .home-info__location {
+        max-width: 12em;
+    }
+
+    .instructions {
+        // background-color: lightgreen;
+
+        .instruction-item {
+            max-width: 15em;
+        }
+    }
+
+    .core-layout {
+        // background-color: greenyellow;
+
+        .nav {
+            // background-color: blue;
+            max-width: 70%;
+
+            &__link {
+                width: 15em;
+                max-height: 30em;
+                // background-color: green;
+            }
+        }
+    }
+}
+
+.restaurant-img {
+position: absolute;
+object-fit: fill;
+}
+
+.restaurant-page {
+height: 100%;
+z-index: 1000;
+// background-color: lightgreen;
+}
+
+.restaurant {
+height: 100%;
+// background-color: lightblue;
+
+    .title {
+        position: relative;
+        z-index: 1000;
+    }
+}
+
+.horiz-layout {
+height: 100vh;
+max-width: 100%;
+padding-bottom: 10em;
+// background-color: lightcoral;
+
+    .menu-layout {
+        // background-color: lawngreen;
+
+        .menu {
+            width: 100%;
+            .menu-item {
+                max-width: 17em;
+            }
+        }
+    }
+ }
+
+.btn__order {
+    width: 10em;
+}
+
+}

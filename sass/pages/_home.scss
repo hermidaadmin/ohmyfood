@@ -1,0 +1,288 @@
+.global {
+    position: relative;
+    &--hidden {
+        animation: show-up 1s 2.5s forwards;
+        opacity: 0;
+        position: relative;
+        z-index: -10;
+    }
+}
+
+
+.loader {
+    border: 0.5rem solid #f3f3f3; /* Light grey */
+    border-top: 0.5rem solid #9356DC; /* Blue */
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    top: 40%;
+    left: 45%;
+    animation: spinner 2.5s ease-in-out forwards;
+  }
+
+
+.sitename {
+    font-weight: 300;
+    font-size: 3rem;
+    padding: 1.5rem;
+}
+
+.home-info {
+
+    margin-bottom: 6rem;
+
+    &__location {
+        text-align: center;
+        background-color: lightgrey;
+        border-top: 1.5px solid gray;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        padding: 3rem;
+        // background: lightblue;
+    }
+
+    &__subtitle {
+        text-align: center;
+        padding: 3rem;
+        // background: lightpink;
+    }
+
+    &__explore {
+        text-align: center;
+        // background: lightgreen;
+        object-fit: contain;
+        padding: 4rem;
+        padding-bottom: 6rem;
+    }
+    
+    i {
+        margin-right: 1.5rem;
+    }
+
+}
+
+.explore-link {
+    background: linear-gradient(175deg, $secondary-color, $primary-color);
+    padding: 2rem;
+    border-radius: 36px;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    font-weight: normal;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1000ms;
+    opacity: 1;
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+}
+
+.instructions {
+    @include flex;
+    margin-bottom: 5rem;
+
+    h3 {
+        align-self: flex-start;
+        margin-left: 2rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.number {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    margin-left: -30px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+
+.instruction-item {
+    display: flex;
+    background-color: whitesmoke;
+    padding: 2rem;
+    width: 78vw;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px lightgrey;
+    transition: background-color 900ms;
+
+    &__text {
+        font-weight: bold;
+        font-size: 1.8rem;
+        align-self: center;
+    }
+
+    &:hover {
+        background-color: lighten($primary-color, 32);
+    }
+
+    i {
+        margin-right: 2rem;
+        margin-left: 2rem;
+        align-self: center;
+        color: #5D5B5B;
+
+    }
+
+    .fas.fa-mobile-alt {
+        margin-right: 3rem;
+    }
+
+    .fas.fa-list-ul {
+        margin-right: 2.4rem;
+    }
+}
+
+.core-layout {
+    @include flex;
+
+    width: 100%;
+    background: darken(whitesmoke, 2%);
+
+    h3 {
+        align-self: flex-start;
+        margin-left: 2.5rem;
+        margin-bottom: 2.5rem;
+        margin-top: 4rem;
+    }
+}
+
+.nav {
+    @include flex;
+
+    
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-bottom: 2.5rem;
+    width: 100%;
+    background: darken(whitesmoke, 2%);
+    // background-color: lightblue;
+
+
+
+    &__link {
+        width: 88%;
+        background-color: white;
+        margin-bottom: 3rem;
+        border-radius: 20px;
+        padding-bottom: 1rem;
+        color: black;
+        text-decoration: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        transition: color 400ms;
+        animation: card-slide-up 3000ms forwards;
+        opacity: 1;
+
+        @for $i from 1 through 4 {
+            &--#{$i} {
+                animation-delay: 400ms * $i;
+            }
+        }
+
+        &:hover {
+            color: lighten(black, 45%);
+            // opacity: 0.8;
+        }
+
+        .new {
+            background-color: $tertiary-color;
+            color: darken($tertiary-color, 35%);
+            width: 18vw;
+            border-radius: 2px;
+            font-weight: 500;
+            text-align: center;
+            padding: 5px;
+            position: absolute;
+            top: 10px;
+            right: 5%;
+        }
+    }
+
+
+    &__restaurant-img {
+        width: 100%;
+        height: 22vh;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit:fill;
+    }
+
+    &__rest-name {
+        // background-color: lightcoral;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    &__rest-location {
+        // background-color: lightseagreen;
+        font-size: 1.6rem;
+        margin: 1rem;
+    }
+
+    &__rest-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    .target {
+        margin-right: 2.5rem;
+        margin-bottom: 1.5rem;
+        align-self: center;
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        
+        &:hover {
+            .heart1 {
+                opacity: 0;
+            }
+
+            .heart2 {
+                opacity: 100%;
+                color: $primary-color;
+            }
+        }
+
+        .heart1 {
+            opacity: 100%;
+            transition: opacity 2s;
+        }
+
+        .heart2 {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+    }
+
+    .far.fa-heart {
+        margin-right: 2.5rem;
+        align-self: center;
+        font-size: 2.4rem;
+        color: lighten(black, 40%);
+    }
+
+    .fas.fa-heart {
+        margin-right: 2.5rem;
+        align-self: center;
+        font-size: 2.4rem;
+        color: lighten(black, 40%);
+    }
+}
+

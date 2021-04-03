@@ -1,0 +1,42 @@
+@mixin flex() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+@mixin media-l {
+    @media screen and (min-width: 1400px) {
+        @content;
+    }
+}
+
+
+@mixin media-xl {
+    @media screen and (min-width: 2400px) {
+        @content;
+    }
+}
+
+
+@mixin media-md {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+
+
+@mixin media-s {
+    @media screen and (max-width: 360px) {
+        @content;
+    }
+}
+
+
+@mixin media-ft {
+    @media screen and (min-width: 540px) {
+        @content;
+    }
+}
